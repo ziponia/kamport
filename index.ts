@@ -26,7 +26,7 @@ class Iamport {
   /**
    * 디버깅 여부
    */
-  private static debug: boolean = false;
+  public static debug: boolean = false;
 
   /**
    * 아임포트 인스턴스

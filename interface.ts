@@ -133,6 +133,7 @@ export interface CertificationCallback {
 }
 
 export interface IamportInstance {
+  debug?: boolean;
   init: (code: string) => void;
   request_pay: (
     param: PaymentRequest,
