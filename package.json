@@ -1,15 +1,15 @@
 {
   "name": "kamport",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "iamport typescript Sdk For Promise",
   "keywords": [
     "iamport",
     "typescript"
   ],
-  "homepage": "https://github.com/ziponia/kmport#readme",
+  "homepage": "https://github.com/ziponia/kamport#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ziponia/kmport.git"
+    "url": "git+https://github.com/ziponia/kamport.git"
   },
   "license": "MIT",
   "author": {
@@ -27,7 +27,7 @@
   },
   "bugs": {
     "email": "thtjwls@gmail.com",
-    "url": "https://github.com/ziponia/kmport/issues"
+    "url": "https://github.com/ziponia/kamport/issues"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
