@@ -1,0 +1,46 @@
+{
+  "name": "kamport",
+  "version": "0.0.1",
+  "description": "iamport typescript Sdk For Promise",
+  "keywords": [
+    "iamport",
+    "typescript"
+  ],
+  "homepage": "https://github.com/ziponia/kmport",
+  "license": "MIT",
+  "author": {
+    "name": "Kuby",
+    "email": "thtjwls@gmail.com",
+    "url": "https://github.com/ziponia"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziponia/kmport.git"
+  },
+  "main": "dist",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@types/uuid": "^8.3.1",
+    "axios": "^0.21.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5",
+    "uuid": "^8.3.2"
+  }
+}
