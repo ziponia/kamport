@@ -1,6 +1,6 @@
 {
   "name": "kamport",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
   "description": "iamport typescript Sdk For Promise",
   "keywords": [
     "iamport",
@@ -17,7 +17,7 @@
     "email": "thtjwls@gmail.com",
     "url": "https://github.com/ziponia"
   },
-  "main": "dist",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "rollup -c -w",
