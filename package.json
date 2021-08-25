@@ -7,10 +7,6 @@
     "typescript"
   ],
   "homepage": "https://github.com/ziponia/kmport#readme",
-  "bugs": {
-    "url": "https://github.com/ziponia/kmport/issues",
-    "email": "thtjwls@gmail.com"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ziponia/kmport.git"
@@ -28,6 +24,10 @@
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "postinstall": "npx sort-package-json"
+  },
+  "bugs": {
+    "email": "thtjwls@gmail.com",
+    "url": "https://github.com/ziponia/kmport/issues"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -47,8 +47,5 @@
     "ts-node": "^10.2.1",
     "typescript": "^4.3.5",
     "uuid": "^8.3.2"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   }
 }
