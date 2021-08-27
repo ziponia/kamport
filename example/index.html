@@ -7,46 +7,6 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="payment">결제하기</button>
-    <script type="module" src="../dist/app.js"></script>
-    <script type="module">
-      import Iamport, { PaymentRequest } from "../dist/app.js";
-
-      export async function install() {
-        Iamport.debug = true;
-
-        await Iamport.initialize();
-        const imp = new Iamport("iamport");
-
-        const merchant_uid =
-          "ORD_" +
-          Math.random().toString(36).slice(2, 5) +
-          new Date().getTime();
-
-        const pay = new PaymentRequest({
-          pg: "html5_inicis",
-          pay_method: "card",
-          merchant_uid: merchant_uid,
-          name: "노르웨이 회전 의자",
-          amount: 100,
-          buyer_email: "gildong@gmail.com",
-          buyer_name: "홍길동",
-          buyer_tel: "010-4242-4242",
-          buyer_addr: "서울특별시 강남구 신사동",
-          buyer_postcode: "01181",
-        });
-
-        try {
-          const rsp = await imp.requestPay(pay);
-          console.log(rsp);
-        } catch (e) {
-          console.error(e);
-        }
-      }
-
-      document.querySelector("#payment").addEventListener("click", (e) => {
-        install();
-      });
-    </script>
+    <div id="root"></div>
   </body>
 </html>

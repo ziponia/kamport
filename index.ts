@@ -114,12 +114,10 @@ class Iamport {
       const { jquery, iamport } = this.checkScript();
 
       if (!jquery) {
-        const jquerySrc = document.createElement("script");
-        jquerySrc.src =
-          "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
-        jquerySrc.setAttribute(this.SCRIPT_ATTR_NAME, "jquery");
-        document.querySelector("head")?.appendChild(jquerySrc);
-        await fetch(jquerySrc.src).then((res) => res.text());
+        await this.createLoadScript(
+          "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js",
+          "jquery"
+        );
       } else {
         if (this.debug) {
           logging(`Jquery Aleady Installed`);
@@ -131,11 +129,10 @@ class Iamport {
       }
 
       if (!iamport) {
-        const impSrc = document.createElement("script");
-        impSrc.src = "https://cdn.iamport.kr/js/iamport.payment-1.1.8.js";
-        impSrc.setAttribute(this.SCRIPT_ATTR_NAME, "iamport");
-        document.querySelector("head")?.appendChild(impSrc);
-        await fetch(impSrc.src).then((res) => res.text());
+        await this.createLoadScript(
+          "https://cdn.iamport.kr/js/iamport.payment-1.1.8.js",
+          "iamport"
+        );
       } else {
         if (this.debug) {
           logging(`Jquery Aleady Installed`);
@@ -148,6 +145,17 @@ class Iamport {
     } catch (e) {
       console.error(e);
     }
+  }
+
+  private static async createLoadScript(src: string, attr: string) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.setAttribute(this.SCRIPT_ATTR_NAME, attr);
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.querySelector("head")?.appendChild(script);
+    });
   }
 }
 
