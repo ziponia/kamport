@@ -28,6 +28,7 @@ function App() {
     const merchant_uid = `ORDER_${new Date().getTime()}`;
 
     // request 객체 생성
+    // 각 인수값에 대한 설명은 https://docs.iamport.kr/sdk/javascript-sdk?lang=ko#request_pay 사이트를 참고
     const req = new PaymentRequest({
       // param
       pg: "html5_inicis",
